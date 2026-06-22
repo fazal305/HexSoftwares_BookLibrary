@@ -57,8 +57,6 @@ Open index.html in browser.
 
 🌐 Live Demo (GitHub Pages)
 
-Enable GitHub Pages from repository settings and access:
-
 https://fazal305.github.io/HexSoftwares_BookLibrary/
 
 📌 Internship Submission
