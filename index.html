@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HexSoftwares Book Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- App Container -->
+  <div class="app-container">
+
+    <!-- Top Navigation Tabs -->
+    <header class="top-nav">
+      <button class="tab-btn active" data-tab="library">My Library</button>
+      <button class="tab-btn" data-tab="history">Borrowing History</button>
+      <button class="tab-btn" data-tab="stats">Statistics</button>
+    </header>
+
+    <!-- SEARCH + CONTROLS -->
+    <section class="controls">
+
+      <!-- Search Bar -->
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search books by title, author, category..." />
+        <button id="clearSearchBtn">✕</button>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="category-filters">
+        <button class="category-pill active" data-category="all">All</button>
+        <button class="category-pill" data-category="Fiction">Fiction</button>
+        <button class="category-pill" data-category="Non-Fiction">Non-Fiction</button>
+        <button class="category-pill" data-category="Science">Science</button>
+        <button class="category-pill" data-category="History">History</button>
+        <button class="category-pill" data-category="Technology">Technology</button>
+        <button class="category-pill" data-category="Biography">Biography</button>
+        <button class="category-pill" data-category="Self-Help">Self-Help</button>
+        <button class="category-pill" data-category="Other">Other</button>
+      </div>
+
+      <!-- Add Book Button -->
+      <button id="openAddBookBtn" class="add-book-btn">+ Add Book</button>
+
+    </section>
+
+    <!--   -->
+    <!-- MY LIBRARY TAB -->
+    <!--   -->
+    <section id="library" class="tab-section active">
+
+      <!-- Sort Controls -->
+      <div class="sort-controls">
+        <select id="sortSelect">
+          <option value="date-added">Date Added</option>
+          <option value="title-asc">Title A-Z</option>
+          <option value="title-desc">Title Z-A</option>
+          <option value="author">Author</option>
+          <option value="year">Year</option>
+          <option value="status">Status</option>
+        </select>
+
+        <button id="toggleViewBtn">Toggle View</button>
+      </div>
+
+      <!-- Book Grid -->
+      <div id="booksGrid" class="books-grid"></div>
+
+    </section>
+
+    <!--   -->
+    <!-- HISTORY TAB -->
+    <!--   -->
+    <section id="history" class="tab-section">
+
+      <div class="history-header">
+        <h2>Borrowing History</h2>
+        <button id="clearHistoryBtn">Clear All</button>
+      </div>
+
+      <div id="historyTable" class="history-table"></div>
+
+    </section>
+
+    <!--   -->
+    <!-- STATS TAB -->
+    <!--   -->
+    <section id="stats" class="tab-section">
+
+      <div class="stats-container">
+
+        <div class="stat-card">
+          <h3>Total Books</h3>
+          <p id="totalBooks">0</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Currently Borrowed</h3>
+          <p id="borrowedCount">0</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>Finished Books</h3>
+          <p id="finishedCount">0</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- ADD / EDIT BOOK MODAL -->
+  <div id="bookFormModal" class="modal hidden">
+
+    <div class="modal-content">
+
+      <h2 id="formTitle">Add New Book</h2>
+
+      <form id="bookForm">
+
+        <input type="text" id="bookTitle" placeholder="Book Title" required />
+        <input type="text" id="bookAuthor" placeholder="Author" required />
+
+        <select id="bookCategory">
+          <option>Fiction</option>
+          <option>Non-Fiction</option>
+          <option>Science</option>
+          <option>History</option>
+          <option>Technology</option>
+          <option>Biography</option>
+          <option>Self-Help</option>
+          <option>Other</option>
+        </select>
+
+        <input type="number" id="bookYear" placeholder="Year Published" />
+        <input type="number" id="bookPages" placeholder="Total Pages" />
+
+        <select id="readingStatus">
+          <option value="not-started">Not Started</option>
+          <option value="reading">Reading</option>
+          <option value="finished">Finished</option>
+        </select>
+
+        <textarea id="bookNotes" placeholder="Notes"></textarea>
+
+        <!-- Cover Color -->
+        <div class="color-picker">
+          <label>Select Cover Color:</label>
+          <div class="color-options">
+            <div class="color" data-color="#00f5ff"></div>
+            <div class="color" data-color="#bf5fff"></div>
+            <div class="color" data-color="#00ff88"></div>
+            <div class="color" data-color="#f5a623"></div>
+            <div class="color" data-color="#ff3860"></div>
+            <div class="color" data-color="#7a788a"></div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Save Book</button>
+          <button type="button" id="closeModalBtn">Cancel</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
