@@ -296,3 +296,15 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 }
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
+
+.tab-btn.active {
+  background: var(--cyan);
+  color: black;
+}

@@ -55,10 +55,15 @@ function borrowBook(id) {
   const name = prompt("Enter borrower name:");
   if (!name) return;
 
-  books = books.map(b =>
+  books = books.map((b) =>
     b.id === id
-      ? { ...b, borrowStatus: "borrowed", borrowerName: name, borrowDate: Date.now() }
-      : b
+      ? {
+          ...b,
+          borrowStatus: "borrowed",
+          borrowerName: name,
+          borrowDate: Date.now(),
+        }
+      : b,
   );
 
   saveBooks();
@@ -67,7 +72,7 @@ function borrowBook(id) {
 }
 
 function returnBook(id) {
-  const book = books.find(b => b.id === id);
+  const book = books.find((b) => b.id === id);
   if (!book) return;
 
   history.push({
@@ -77,15 +82,15 @@ function returnBook(id) {
     bookAuthor: book.author,
     borrowerName: book.borrowerName,
     borrowDate: book.borrowDate,
-    returnDate: Date.now()
+    returnDate: Date.now(),
   });
 
   saveHistory();
 
-  books = books.map(b =>
+  books = books.map((b) =>
     b.id === id
       ? { ...b, borrowStatus: "available", borrowerName: "", borrowDate: null }
-      : b
+      : b,
   );
 
   saveBooks();
@@ -99,7 +104,7 @@ function returnBook(id) {
 /*   */
 
 function deleteBook(id) {
-  books = books.filter(b => b.id !== id);
+  books = books.filter((b) => b.id !== id);
   saveBooks();
   renderBooks();
   renderStats();
@@ -113,16 +118,17 @@ function applyFilters() {
   let filtered = [...books];
 
   if (activeCategory !== "all") {
-    filtered = filtered.filter(b => b.category === activeCategory);
+    filtered = filtered.filter((b) => b.category === activeCategory);
   }
 
   if (activeSearch.trim()) {
     const q = activeSearch.toLowerCase();
 
-    filtered = filtered.filter(b =>
-      b.title.toLowerCase().includes(q) ||
-      b.author.toLowerCase().includes(q) ||
-      b.category.toLowerCase().includes(q)
+    filtered = filtered.filter(
+      (b) =>
+        b.title.toLowerCase().includes(q) ||
+        b.author.toLowerCase().includes(q) ||
+        b.category.toLowerCase().includes(q),
     );
   }
 
@@ -144,7 +150,7 @@ function renderBooks() {
     return;
   }
 
-  filtered.forEach(book => {
+  filtered.forEach((book) => {
     const card = document.createElement("div");
     card.className = "book-card";
 
@@ -162,9 +168,11 @@ function renderBooks() {
       <div class="status">${book.readingStatus}</div>
 
       <div class="borrow-status">
-        ${book.borrowStatus === "borrowed"
-          ? `Borrowed by: ${book.borrowerName}`
-          : "Available"}
+        ${
+          book.borrowStatus === "borrowed"
+            ? `Borrowed by: ${book.borrowerName}`
+            : "Available"
+        }
       </div>
 
       ${borrowBtn}
@@ -190,7 +198,7 @@ function renderHistory() {
     return;
   }
 
-  history.forEach(h => {
+  history.forEach((h) => {
     const row = document.createElement("div");
     row.className = "history-row";
 
@@ -198,7 +206,7 @@ function renderHistory() {
     const returnDate = new Date(h.returnDate).toLocaleDateString();
 
     const days = Math.ceil(
-      (h.returnDate - h.borrowDate) / (1000 * 60 * 60 * 24)
+      (h.returnDate - h.borrowDate) / (1000 * 60 * 60 * 24),
     );
 
     row.innerHTML = `
@@ -218,9 +226,9 @@ function renderHistory() {
 
 function renderStats() {
   const total = books.length;
-  const borrowed = books.filter(b => b.borrowStatus === "borrowed").length;
+  const borrowed = books.filter((b) => b.borrowStatus === "borrowed").length;
   const available = total - borrowed;
-  const finished = books.filter(b => b.readingStatus === "finished").length;
+  const finished = books.filter((b) => b.readingStatus === "finished").length;
 
   const set = (id, value) => {
     const el = document.getElementById(id);
@@ -238,7 +246,7 @@ function renderStats() {
 /*   */
 
 function setupEvents() {
-  document.getElementById("searchInput").addEventListener("input", e => {
+  document.getElementById("searchInput").addEventListener("input", (e) => {
     activeSearch = e.target.value;
     renderBooks();
   });
@@ -249,11 +257,11 @@ function setupEvents() {
     renderBooks();
   });
 
-  document.querySelectorAll(".category-pill").forEach(btn => {
+  document.querySelectorAll(".category-pill").forEach((btn) => {
     btn.addEventListener("click", () => {
-      document.querySelectorAll(".category-pill").forEach(b =>
-        b.classList.remove("active")
-      );
+      document
+        .querySelectorAll(".category-pill")
+        .forEach((b) => b.classList.remove("active"));
 
       btn.classList.add("active");
       activeCategory = btn.dataset.category;
@@ -269,6 +277,26 @@ function setupEvents() {
     document.getElementById("bookFormModal").classList.add("hidden");
   });
 }
+function showTab(tabId) {
+  document.querySelectorAll(".tab-section").forEach((section) => {
+    section.classList.remove("active");
+  });
+
+  document.querySelectorAll(".tab-btn").forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  const target = document.getElementById(tabId);
+  if (target) target.classList.add("active");
+
+  const activeBtn = document.querySelector(`[data-tab="${tabId}"]`);
+  if (activeBtn) activeBtn.classList.add("active");
+}
+document.querySelectorAll(".tab-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    showTab(btn.dataset.tab);
+  });
+});
 
 /*   */
 /* INIT */
@@ -288,8 +316,8 @@ function init() {
         readingStatus: "finished",
         borrowStatus: "available",
         borrowerName: "",
-        borrowDate: null
-      }
+        borrowDate: null,
+      },
     ];
 
     saveBooks();
