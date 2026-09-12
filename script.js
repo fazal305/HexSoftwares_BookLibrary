@@ -48,6 +48,22 @@ function generateId() {
 }
 
 /*   */
+/* TOAST */
+/*   */
+
+function showToast(message) {
+  const existing = document.querySelector(".app-toast");
+  if (existing) existing.remove();
+
+  const toast = document.createElement("div");
+  toast.className = "app-toast";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  setTimeout(() => toast.remove(), 2500);
+}
+
+/*   */
 /* BORROW / RETURN */
 /*   */
 
@@ -69,6 +85,7 @@ function borrowBook(id) {
   saveBooks();
   renderBooks();
   renderStats();
+  showToast("Book borrowed successfully.");
 }
 
 function returnBook(id) {
@@ -97,6 +114,7 @@ function returnBook(id) {
   renderBooks();
   renderHistory();
   renderStats();
+  showToast("Book returned successfully.");
 }
 
 /*   */
@@ -276,6 +294,85 @@ function setupEvents() {
   document.getElementById("closeModalBtn").addEventListener("click", () => {
     document.getElementById("bookFormModal").classList.add("hidden");
   });
+
+  document.getElementById("bookForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    handleAddBook();
+  });
+}
+
+/*   */
+/* FIELD VALIDATION */
+/*   */
+
+function showFieldError(field, message) {
+  clearFieldError(field);
+
+  field.classList.add("is-invalid");
+
+  const errorEl = document.createElement("div");
+  errorEl.className = "field-error";
+  errorEl.textContent = message;
+  field.insertAdjacentElement("afterend", errorEl);
+}
+
+function clearFieldError(field) {
+  field.classList.remove("is-invalid");
+
+  const next = field.nextElementSibling;
+  if (next && next.classList.contains("field-error")) next.remove();
+}
+
+/*   */
+/* ADD BOOK */
+/*   */
+
+function handleAddBook() {
+  const titleField = document.getElementById("bookTitle");
+  const authorField = document.getElementById("bookAuthor");
+
+  clearFieldError(titleField);
+  clearFieldError(authorField);
+
+  let isValid = true;
+
+  if (!titleField.value.trim()) {
+    showFieldError(titleField, "Please enter a book title.");
+    isValid = false;
+  }
+
+  if (!authorField.value.trim()) {
+    showFieldError(authorField, "Please enter an author.");
+    isValid = false;
+  }
+
+  if (!isValid) return;
+
+  const selectedColorEl = document.querySelector(".color.selected");
+
+  const newBook = {
+    id: generateId(),
+    title: titleField.value.trim(),
+    author: authorField.value.trim(),
+    category: document.getElementById("bookCategory").value,
+    year: document.getElementById("bookYear").value,
+    pages: document.getElementById("bookPages").value,
+    readingStatus: document.getElementById("readingStatus").value,
+    notes: document.getElementById("bookNotes").value,
+    coverColor: selectedColorEl ? selectedColorEl.dataset.color : "#00f5ff",
+    borrowStatus: "available",
+    borrowerName: "",
+    borrowDate: null,
+  };
+
+  books.push(newBook);
+  saveBooks();
+  renderBooks();
+  renderStats();
+
+  document.getElementById("bookForm").reset();
+  document.getElementById("bookFormModal").classList.add("hidden");
+  showToast("Book added successfully.");
 }
 function showTab(tabId) {
   document.querySelectorAll(".tab-section").forEach((section) => {
@@ -305,23 +402,6 @@ document.querySelectorAll(".tab-btn").forEach((btn) => {
 function init() {
   books = loadBooks();
   history = loadHistory();
-
-  if (!books.length) {
-    books = [
-      {
-        id: generateId(),
-        title: "The Alchemist",
-        author: "Paulo Coelho",
-        category: "Fiction",
-        readingStatus: "finished",
-        borrowStatus: "available",
-        borrowerName: "",
-        borrowDate: null,
-      },
-    ];
-
-    saveBooks();
-  }
 
   setupEvents();
   renderBooks();
