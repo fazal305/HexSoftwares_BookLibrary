@@ -171,6 +171,7 @@ function renderBooks() {
   filtered.forEach((book) => {
     const card = document.createElement("div");
     card.className = "book-card";
+    card.style.borderLeftColor = book.coverColor || "#00f5ff";
 
     const borrowBtn =
       book.borrowStatus === "available"
@@ -298,6 +299,16 @@ function setupEvents() {
   document.getElementById("bookForm").addEventListener("submit", (e) => {
     e.preventDefault();
     handleAddBook();
+  });
+
+  const colorSwatches = document.querySelectorAll(".color-options .color");
+  colorSwatches.forEach((swatch, index) => {
+    swatch.style.backgroundColor = swatch.dataset.color;
+    if (index === 0) swatch.classList.add("selected");
+    swatch.addEventListener("click", () => {
+      colorSwatches.forEach((s) => s.classList.remove("selected"));
+      swatch.classList.add("selected");
+    });
   });
 }
 

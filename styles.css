@@ -172,7 +172,7 @@ body {
 
 .book-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .book-title {
@@ -194,19 +194,37 @@ body {
   margin: 3px 0;
 }
 
-.badge.fiction { background: var(--cyan); color: #000; }
-.badge.science { background: var(--purple); color: #000; }
-.badge.history { background: var(--amber); color: #000; }
-.badge.tech { background: var(--green); color: #000; }
+.badge.fiction {
+  background: var(--cyan);
+  color: #000;
+}
+.badge.science {
+  background: var(--purple);
+  color: #000;
+}
+.badge.history {
+  background: var(--amber);
+  color: #000;
+}
+.badge.tech {
+  background: var(--green);
+  color: #000;
+}
 
 .status {
   font-size: 12px;
   margin-top: 8px;
 }
 
-.status.not-started { color: var(--muted); }
-.status.reading { color: var(--amber); }
-.status.finished { color: var(--green); }
+.status.not-started {
+  color: var(--muted);
+}
+.status.reading {
+  color: var(--amber);
+}
+.status.finished {
+  color: var(--green);
+}
 
 /*   */
 /* HISTORY */
@@ -253,7 +271,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,6 +303,28 @@ body {
 
 .modal-content input.is-invalid {
   border-color: var(--red);
+}
+
+.color-picker {
+  margin: 8px 0;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.color-options .color {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.color-options .color.selected {
+  border-color: var(--text);
 }
 
 .field-error {
