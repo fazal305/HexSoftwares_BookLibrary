@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAZAL ABBAS | Animated Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta name="description" content="A fully animated single-page portfolio website built for the HexSoftwares Internship, demonstrating CSS animations, staggered transitions, scroll-triggered effects, and JavaScript-based interactivity.">
+  <link rel="canonical" href="https://fazal305.github.io/HexSoftwares_AnimatingWebsite/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fazal305.github.io/HexSoftwares_AnimatingWebsite/">
+  <meta property="og:title" content="FAZAL ABBAS | Animated Portfolio">
+  <meta property="og:description" content="A fully animated single-page portfolio website built for the HexSoftwares Internship, demonstrating CSS animations, staggered transitions, scroll-triggered effects, and JavaScript-based interactivity.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAZAL ABBAS | Animated Portfolio">
+  <meta name="twitter:description" content="A fully animated single-page portfolio website built for the HexSoftwares Internship, demonstrating CSS animations, staggered transitions, scroll-triggered effects, and JavaScript-based interactivity.">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar js-animate" data-delay="0s">
+    <div class="logo">&lt;FA /&gt;</div>
+
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link" data-delay="0.1s">Home</a></li>
+      <li><a href="#" class="nav-link" data-delay="0.2s">About</a></li>
+      <li><a href="#" class="nav-link" data-delay="0.3s">Skills</a></li>
+      <li><a href="#" class="nav-link" data-delay="0.4s">Projects</a></li>
+      <li><a href="#" class="nav-link" data-delay="0.5s">Contact</a></li>
+    </ul>
+
+    <button class="btn-cta js-animate" data-delay="0.6s">Hire Me</button>
+
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <p class="hero-badge js-animate" data-delay="0.3s">
+        🚀 Available for Work
+      </p>
+
+      <h2 class="hero-greeting js-animate" data-delay="0.6s">
+        Hello, I am
+      </h2>
+
+      <h1 class="hero-name js-animate" data-delay="0.9s">
+        FAZAL ABBAS
+      </h1>
+
+      <h3 class="hero-role js-animate" data-delay="1.2s">
+        <span id="typewriter"></span>
+      </h3>
+
+      <p class="hero-desc js-animate" data-delay="1.5s">
+        I build modern, animated, and interactive frontend experiences using HTML, CSS, and JavaScript.
+      </p>
+
+      <div class="hero-buttons">
+
+        <button class="btn-primary js-animate" data-delay="1.8s">
+          View My Work
+        </button>
+
+       <a href="assets/resume.pdf" download class="btn-secondary js-animate" data-delay="2.0s">
+  Download CV
+</a>
+
+      </div>
+
+      <div class="socials js-animate" data-delay="2.2s">
+  <a href="https://github.com/fazal305/" target="_blank" rel="noopener noreferrer">
+    GitHub
+  </a>
+
+  <a href="https://www.linkedin.com/in/fazal-abbas-4653dg86/" target="_blank" rel="noopener noreferrer">
+    LinkedIn
+  </a>
+</div>
+
+      <div class="scroll-indicator js-animate" data-delay="2.5s">
+        ↓
+      </div>
+
+    </div>
+
+    <!-- floating particles (visual only, styled later) -->
+    <div class="particles">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+  </header>
+
+
+  <!-- SKILLS SECTION -->
+  <section class="skills-section js-animate" data-delay="0s">
+
+    <h2 class="section-title js-animate" data-delay="0.1s">Skills</h2>
+    <p class="section-subtitle js-animate" data-delay="0.2s">
+      Technologies I work with
+    </p>
+
+    <div class="skills-grid">
+
+      <div class="skill-card js-animate" data-delay="0s">
+        HTML5 🎯
+        <div class="skill-bar" data-percent="90"></div>
+      </div>
+
+      <div class="skill-card js-animate" data-delay="0.1s">
+        CSS3 🎨
+        <div class="skill-bar" data-percent="88"></div>
+      </div>
+
+      <div class="skill-card js-animate" data-delay="0.2s">
+        JavaScript ⚡
+        <div class="skill-bar" data-percent="85"></div>
+      </div>
+
+      <div class="skill-card js-animate" data-delay="0.3s">
+        Bootstrap 🚀
+        <div class="skill-bar" data-percent="82"></div>
+      </div>
+
+      <div class="skill-card js-animate" data-delay="0.4s">
+        Firebase 🔥
+        <div class="skill-bar" data-percent="78"></div>
+      </div>
+
+      <div class="skill-card js-animate" data-delay="0.5s">
+        jQuery ⚙️
+        <div class="skill-bar" data-percent="80"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+  <section class="projects-section js-animate">
+
+    <h2 class="section-title" data-delay="0.1s">Projects</h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card js-animate" data-delay="0s">
+        NIGHTCITY OS
+      </div>
+
+      <div class="project-card js-animate" data-delay="0.2s">
+        Particle Reactor
+      </div>
+
+      <div class="project-card js-animate" data-delay="0.4s">
+        Firebase Habit Tracker
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact-section js-animate">
+
+    <h2 class="section-title" data-delay="0s">Contact</h2>
+
+    <a href="mailto:example@email.com" class="email-link js-animate" data-delay="0.3s">
+      Send Email
+    </a>
+
+    <div class="contact-socials">
+      <a class="js-animate" data-delay="0.15s">GitHub</a>
+      <a class="js-animate" data-delay="0.3s">LinkedIn</a>
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer js-animate" data-delay="0s">
+    <p>© 2026 FAZAL ABBAS. All rights reserved.</p>
+    <button class="back-to-top">↑</button>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
