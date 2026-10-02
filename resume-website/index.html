@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Resume website of Fazal Abbas, a frontend developer and software engineering student from Karachi, Pakistan."
+    />
+    <link rel="canonical" href="https://fazal305.github.io/HexSoftwares_Resume_Website/" />
+
+    <title>Fazal Abbas - Resume Website</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fazal305.github.io/HexSoftwares_Resume_Website/" />
+    <meta property="og:title" content="Fazal Abbas - Resume Website" />
+    <meta
+      property="og:description"
+      content="Resume website of Fazal Abbas, a frontend developer and software engineering student from Karachi, Pakistan."
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fazal Abbas - Resume Website" />
+    <meta
+      name="twitter:description"
+      content="Resume website of Fazal Abbas, a frontend developer and software engineering student from Karachi, Pakistan."
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f7fb;
+        color: #222222;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      a {
+        color: #0059c9;
+      }
+
+      a:focus,
+      a:hover {
+        outline: none;
+        color: #003f8f;
+      }
+
+      .page {
+        max-width: 960px;
+        margin: 30px auto;
+        background: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 16px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding: 36px;
+        background: linear-gradient(135deg, #07172f, #123c7c);
+        color: #ffffff;
+      }
+
+      .profile-photo {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        border: 5px solid #ffffff;
+        object-fit: cover;
+      }
+
+      .hero-content h1 {
+        font-size: 2.4rem;
+        margin: 0 0 8px;
+      }
+
+      .title {
+        color: #b9d8ff;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin: 0 0 12px;
+      }
+
+      .hero-content p {
+        margin: 6px 0;
+      }
+
+      .content {
+        padding: 34px 36px;
+      }
+
+      section {
+        margin-bottom: 30px;
+      }
+
+      section:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        color: #0b3d91;
+        border-bottom: 2px solid #0b3d91;
+        padding-bottom: 8px;
+        margin: 0 0 16px;
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        color: #1a1a1a;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 6px;
+      }
+
+      .project-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .project-card {
+        background: #f8fbff;
+        border: 1px solid #dbe8ff;
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .project-card p {
+        margin: 6px 0 0;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .tagline {
+        background: #eef5ff;
+        border-left: 4px solid #0b3d91;
+        padding: 14px 16px;
+        border-radius: 8px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #f1f5fb;
+        color: #555555;
+      }
+
+      @media (max-width: 720px) {
+        .page {
+          margin: 0;
+          border-radius: 0;
+        }
+
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 28px 20px;
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .content {
+          padding: 28px 20px;
+        }
+
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        .page {
+          margin: 0;
+          border: none;
+          box-shadow: none;
+        }
+
+        .hero {
+          background: #ffffff;
+          color: #000000;
+          border-bottom: 2px solid #000000;
+        }
+
+        .title {
+          color: #000000;
+        }
+
+        a {
+          color: #000000;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="page">
+      <header class="hero">
+        <img
+          src="profile-photo.jpg"
+          alt="Portrait of Fazal Abbas"
+          width="180"
+          height="180"
+          class="profile-photo"
+        />
+
+        <div class="hero-content">
+          <h1>Fazal Abbas</h1>
+          <p class="title">Frontend Developer — React, JavaScript &amp; Firebase</p>
+          <p>Karachi, Pakistan</p>
+          <p>
+            Building responsive, production-ready web apps with React,
+            JavaScript, and Firebase, and growing into full-stack work with
+            Node.js, Express, and MongoDB.
+          </p>
+        </div>
+      </header>
+
+      <div class="content">
+        <section aria-labelledby="about-heading">
+          <h2 id="about-heading">About Me</h2>
+
+          <p>
+            I'm a software engineering student from Karachi, Pakistan,
+            focused on frontend development with React, JavaScript, and
+            Firebase. I build responsive, production-ready web apps &mdash; my
+            strongest project is a point-of-sale and inventory system built
+            for a real retail business, and I've also shipped a clinic
+            management system, a school management platform, and business
+            tools like invoicing and quoting apps. I'm actively growing into
+            full-stack work with Node.js, Express, and MongoDB, and I also
+            have a 3-year VB.NET background covering data structures,
+            algorithms, and object-oriented programming.
+          </p>
+
+          <p class="tagline">
+            My learning style is project-based: I improve by building real
+            products, polishing the details, and turning simple ideas into clean
+            portfolio-ready work.
+          </p>
+        </section>
+
+        <section aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills</h2>
+
+          <div class="grid">
+            <article>
+              <h3>Frontend</h3>
+
+              <ul>
+                <li>React</li>
+                <li>JavaScript (ES6+)</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Tailwind CSS</li>
+                <li>Bootstrap 5</li>
+                <li>jQuery</li>
+                <li>Canvas API</li>
+                <li>Web Audio API</li>
+              </ul>
+            </article>
+
+            <article>
+              <h3>Backend &amp; Data</h3>
+
+              <ul>
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>Firebase Auth and Firestore</li>
+                <li>MongoDB</li>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>REST APIs</li>
+                <li>Git and GitHub</li>
+                <li>VB.NET</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+
+          <div class="project-list">
+            <article class="project-card">
+              <h3>Frontend Development Intern &mdash; NexSoft Solutions</h3>
+              <p>
+                Jun&ndash;Jul 2026 &middot; Karachi, Pakistan. One-month,
+                project-based virtual internship. Built real-time features
+                with Socket.io and Firebase Firestore, a JWT-authenticated
+                task manager with Kanban boards, a notes app, a full ecommerce
+                app with cart and checkout, and a MERN blog with JWT auth.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>Web Development Intern &mdash; Hex Softwares Pvt. Ltd.</h3>
+              <p>
+                Jun&ndash;Jul 2026 &middot; Karachi, Pakistan. One-month,
+                project-based virtual internship. Built a Node/Express/MongoDB
+                crowdfunding platform with JWT authentication, among other web
+                projects.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>Frontend Development Intern &mdash; CodeAlpha</h3>
+              <p>
+                Jun&ndash;Jul 2026 &middot; Karachi, Pakistan. One-month,
+                project-based virtual internship focused on frontend build
+                tasks and UI components.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>Frontend Development Intern &mdash; DecodeLabs</h3>
+              <p>
+                Jun&ndash;Jul 2026 &middot; Karachi, Pakistan. One-month,
+                project-based virtual internship covering responsive web
+                layout and interactive web element implementation.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Highlighted Projects</h2>
+
+          <div class="project-list">
+            <article class="project-card">
+              <h3>Point-of-Sale &amp; Inventory System</h3>
+              <p>
+                A React and Firebase point-of-sale system built for a real
+                retail business, with inventory, suppliers, customers, barcode
+                support, receipts, and reporting.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>ClinicOS &mdash; Clinic Management System</h3>
+              <p>
+                Patient records, appointments, doctor and receptionist roles,
+                and billing, with role-based access and real-time data. Built
+                with React and Firebase.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>EduLedger &mdash; School Management System</h3>
+              <p>
+                Full-stack school management platform with a 17-table
+                normalized schema, server-side role-based access control, and
+                a deployed MySQL backend. Built with React, Vite, Tailwind,
+                TanStack Query, Node/Express, and MySQL.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>QuoteForge &mdash; Quotation &amp; Invoicing Platform</h3>
+              <p>
+                A quotation and invoicing tool for small businesses, with a
+                serverless backend and hosted Postgres database. Built with
+                React and Vercel Functions.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <h3>CivicConnect &mdash; Civic Issue Reporting Platform</h3>
+              <p>
+                A civic issue reporting platform for Pakistan supporting
+                English, Roman Urdu, and Urdu, generating structured
+                complaints from citizen reports.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact Information</h2>
+
+          <div class="contact-list">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:fazalabbas2002@gmail.com">
+                fazalabbas2002@gmail.com
+              </a>
+            </p>
+
+            <p>
+              <strong>Portfolio:</strong>
+              <a href="https://fazal.is-a.dev" target="_blank" rel="noopener">
+                fazal.is-a.dev
+              </a>
+            </p>
+
+            <p>
+              <strong>GitHub:</strong>
+              <a
+                href="https://github.com/fazal305"
+                target="_blank"
+                rel="noopener"
+              >
+                github.com/fazal305
+              </a>
+            </p>
+
+            <p>
+              <strong>LinkedIn:</strong>
+              <a
+                href="https://www.linkedin.com/in/fazal-abbas-4653dg86"
+                target="_blank"
+                rel="noopener"
+              >
+                linkedin.com/in/fazal-abbas-4653dg86
+              </a>
+            </p>
+
+            <p><strong>Location:</strong> Karachi, Pakistan</p>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <p>
+          Built by Fazal Abbas as part of the HexSoftwares Frontend Internship.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
