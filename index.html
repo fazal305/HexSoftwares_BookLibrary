@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>HexSoftwares Internship Projects</title>
+<meta name="description" content="Index of frontend and full-stack projects built during the HexSoftwares internship." />
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #12151c;
+    --border: #232832;
+    --text: #eef1f6;
+    --muted: #9aa4b2;
+    --accent: #5b8cff;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 48px 16px 64px;
+  }
+
+  main {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 36px;
+  }
+
+  h1 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    margin: 0 0 12px;
+  }
+
+  p.intro {
+    color: var(--muted);
+    max-width: 620px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  p.byline {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  .grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  a.card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 18px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  a.card:hover,
+  a.card:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+  }
+
+  .card .num {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .card h2 {
+    margin: 6px 0 8px;
+    font-size: 1.05rem;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  footer {
+    margin-top: 44px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --border: #e2e5eb;
+      --text: #10131a;
+      --muted: #566072;
+      --accent: #2f5fdc;
+    }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>HexSoftwares Internship Projects</h1>
+      <p class="intro">
+        Nine projects built during the HexSoftwares Frontend/Full-Stack
+        Development Internship — HTML, CSS, JavaScript, responsive design
+        and full-stack fundamentals, each living in its own subfolder of
+        this repo.
+      </p>
+      <p class="byline">Fazal Abbas</p>
+    </header>
+
+    <div class="grid">
+      <a class="card" href="./book-library/index.html">
+        <div class="num">01</div>
+        <h2>Book Library</h2>
+        <p>Real-time search, category filtering and a borrowing history system powered by localStorage.</p>
+      </a>
+      <a class="card" href="./animating-website/index.html">
+        <div class="num">02</div>
+        <h2>Animating Website</h2>
+        <p>A fully animated single-page portfolio with scroll-triggered effects and a typewriter system.</p>
+      </a>
+      <a class="card" href="./animal-charity-website/index.html">
+        <div class="num">03</div>
+        <h2>Animal Charity Website</h2>
+        <p>Adoption filters, a donation system and volunteer forms.</p>
+      </a>
+      <a class="card" href="./web-music-player/index.html">
+        <div class="num">04</div>
+        <h2>Web Music Player</h2>
+        <p>Built with the HTML5 Audio API, jQuery and Bootstrap — playlist, playback controls and volume.</p>
+      </a>
+      <a class="card" href="./crowdfunding-platform/index.html">
+        <div class="num">05</div>
+        <h2>Crowdfunding Platform</h2>
+        <p>Full-stack app with Node.js, Express, MongoDB and JWT auth; Bootstrap + jQuery frontend.</p>
+      </a>
+      <a class="card" href="./gym-website/index.html">
+        <div class="num">06</div>
+        <h2>Gym Website</h2>
+        <p>Services tabs, a pricing toggle, animated counters, a testimonials carousel and a validated form.</p>
+      </a>
+      <a class="card" href="./personal-portfolio/index.html">
+        <div class="num">07</div>
+        <h2>Personal Portfolio</h2>
+        <p>Responsive design with semantic HTML, CSS Grid and Flexbox.</p>
+      </a>
+      <a class="card" href="./resume-website/index.html">
+        <div class="num">08</div>
+        <h2>Resume Website</h2>
+        <p>A clean, responsive, HTML-only resume website.</p>
+      </a>
+      <a class="card" href="./todo-app/index.html">
+        <div class="num">09</div>
+        <h2>Todo App</h2>
+        <p>A simple to-do list app built with HTML, CSS and JavaScript.</p>
+      </a>
+    </div>
+
+    <footer>
+      <a href="https://github.com/fazal305/HexSoftwares_BookLibrary">View source on GitHub</a>
+    </footer>
+  </main>
+</body>
+</html>
