@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRONPEAK GYM | Forge Your Best Self</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <meta name="description" content="Single-page responsive Gym Website built with HTML5, CSS3, and Vanilla JavaScript for HexSoftwares Internship — services tabs, pricing toggle, animated counters, testimonials carousel, contact form." />
+    <link rel="canonical" href="https://fazal305.github.io/HexSoftwares_GymWebsite/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fazal305.github.io/HexSoftwares_GymWebsite/" />
+    <meta property="og:title" content="IRONPEAK GYM | Forge Your Best Self" />
+    <meta property="og:description" content="Single-page responsive Gym Website built with HTML5, CSS3, and Vanilla JavaScript for HexSoftwares Internship — services tabs, pricing toggle, animated counters, testimonials carousel, contact form." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IRONPEAK GYM | Forge Your Best Self" />
+    <meta name="twitter:description" content="Single-page responsive Gym Website built with HTML5, CSS3, and Vanilla JavaScript for HexSoftwares Internship — services tabs, pricing toggle, animated counters, testimonials carousel, contact form." />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+      <div class="container">
+        <a href="#home" class="logo"> IRONPEAK ❤️ </a>
+
+        <nav class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#facilities" class="nav-link">Facilities</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#plans" class="nav-link">Plans</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>FORGE YOUR BEST SELF</h1>
+
+            <p>
+              Karachi's premier gym for strength, endurance, and transformation.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#plans" class="btn btn-primary"> Start Your Journey </a>
+
+              <a href="#facilities" class="btn btn-secondary">
+                Explore Facilities
+              </a>
+            </div>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-card">
+              <h3 class="counter" data-target="500">0</h3>
+              <p>Members</p>
+            </div>
+
+            <div class="stat-card">
+              <h3 class="counter" data-target="15">0</h3>
+              <p>Expert Trainers</p>
+            </div>
+
+            <div class="stat-card">
+              <h3 class="counter" data-target="50">0</h3>
+              <p>Equipment</p>
+            </div>
+
+            <div class="stat-card">
+              <h3 class="counter" data-target="8">0</h3>
+              <p>Years Experience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="about section">
+        <div class="container">
+          <h2>Why Choose IRONPEAK?</h2>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                Located in Karachi, IRONPEAK GYM is built for people who want
+                real fitness results.
+              </p>
+
+              <p>
+                Our facility combines modern equipment, expert coaching, and a
+                motivating atmosphere.
+              </p>
+
+              <p>
+                Whether you're a beginner or an athlete, our trainers help you
+                reach your goals.
+              </p>
+
+              <p>
+                Join a supportive community focused on strength, health, and
+                transformation.
+              </p>
+
+              <div class="badges">
+                <span class="badge"> State-of-the-Art Equipment </span>
+
+                <span class="badge"> Expert Certified Trainers </span>
+
+                <span class="badge"> 24/7 Access </span>
+              </div>
+            </div>
+            <div class="about-image">
+              <img src="assets/images/about.jpg" alt="Gym Training" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FACILITIES SECTION -->
+      <section id="facilities" class="facilities section">
+        <div class="container">
+          <h2>World-Class Facilities</h2>
+
+          <div class="facilities-grid">
+<article class="facility-card js-animate">
+    <div class="facility-image">
+        <img src="assets/images/facility-01.jpg" alt="Weight Training">
+    </div>
+              <h3>Weight Training</h3>
+              <p>Full range of free weights and machines.</p>
+            </article>
+
+            <article class="facility-card js-animate">
+              <div class=facility-image">
+                <img src="assets/images/facility-02.jpg" alt="Cardio Zone">
+              </div>
+              <h3>Cardio Zone</h3>
+              <p>Treadmills, bikes, and ellipticals.</p>
+            </article>
+
+            <article class="facility-card js-animate">
+              <div class="facility-image">
+                <img src="assets/images/facility-03.jpg" alt="Yoga">
+              </div>
+              <h3>Yoga & Stretching</h3>
+              <p>Dedicated calm studio environment.</p>
+            </article>
+
+            <article class="facility-card js-animate">
+              <div class="facility-image">
+                <img src="assets/images/facility-04.jpg" alt="Boxing">
+              </div>
+              <h3>Boxing</h3>
+              <p>Ring, heavy bags, and speed bags.</p>
+            </article>
+
+            <article class="facility-card js-animate">
+              <div class="facility-image">
+                <img src="assets/images/facility-05.jpg" alt="Swimming Pool">
+              </div>
+              <h3>Swimming Pool</h3>
+              <p>Olympic-size heated swimming pool.</p>
+            </article>
+
+            <article class="facility-card js-animate">
+              <div class="facility-image">
+                <img src="assets/images/facility-06.jpg" alt="Locker Room">
+              </div>
+              <h3>Locker Rooms</h3>
+              <p>Premium showers and changing rooms.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES SECTION -->
+      <section id="services" class="services section">
+        <div class="container">
+          <h2>Our Services</h2>
+
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="personal">
+              Personal Training
+            </button>
+
+            <button class="tab-btn" data-tab="group">Group Classes</button>
+
+            <button class="tab-btn" data-tab="nutrition">
+              Nutrition Coaching
+            </button>
+
+            <button class="tab-btn" data-tab="online">Online Training</button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-panel active" id="personal">
+              <h3>Personal Training</h3>
+              <p>
+                1-on-1 coaching, custom programs, and goal-focused training
+                plans.
+              </p>
+            </div>
+
+            <div class="tab-panel" id="group">
+              <h3>Group Classes</h3>
+
+              <div class="class-grid">
+                <div>HIIT</div>
+                <div>Zumba</div>
+                <div>Spinning</div>
+                <div>CrossFit</div>
+              </div>
+            </div>
+
+            <div class="tab-panel" id="nutrition">
+              <h3>Nutrition Coaching</h3>
+              <p>Personalized diet plans and macro tracking.</p>
+            </div>
+
+            <div class="tab-panel" id="online">
+              <h3>Online Training</h3>
+              <p>Remote coaching, video workouts, and app access.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MEMBERSHIP SECTION -->
+      <section id="plans" class="plans section">
+        <div class="container">
+          <h2>Choose Your Plan</h2>
+
+          <div class="pricing-toggle">
+            <span>Monthly</span>
+
+            <button id="pricingToggle" class="toggle-btn">Toggle</button>
+
+            <span>
+              Yearly
+              <strong>SAVE 20%</strong>
+            </span>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="plan-card">
+              <h3>STARTER</h3>
+
+              <div
+                class="price"
+                data-monthly="PKR 3,500"
+                data-yearly="PKR 2,800"
+              >
+                PKR 3,500
+              </div>
+
+              <ul>
+                <li>3 days/week access</li>
+                <li>Basic equipment access</li>
+                <li>1 group class/week</li>
+                <li>Locker room access</li>
+              </ul>
+
+              <button class="plan-btn" data-plan="Starter">Get Started</button>
+            </article>
+
+            <article class="plan-card popular">
+              <span class="popular-badge"> MOST POPULAR </span>
+
+              <h3>PRO</h3>
+
+              <div
+                class="price"
+                data-monthly="PKR 6,500"
+                data-yearly="PKR 5,200"
+              >
+                PKR 6,500
+              </div>
+
+              <ul>
+                <li>Unlimited access</li>
+                <li>Full equipment access</li>
+                <li>Unlimited group classes</li>
+                <li>2 PT sessions/month</li>
+                <li>Nutrition consultation</li>
+              </ul>
+
+              <button class="plan-btn" data-plan="Pro">Get Started</button>
+            </article>
+
+            <article class="plan-card">
+              <h3>ELITE</h3>
+
+              <div
+                class="price"
+                data-monthly="PKR 12,000"
+                data-yearly="PKR 9,600"
+              >
+                PKR 12,000
+              </div>
+
+              <ul>
+                <li>Everything in Pro</li>
+                <li>Unlimited PT</li>
+                <li>Dedicated locker</li>
+                <li>Pool access</li>
+                <li>Priority booking</li>
+              </ul>
+
+              <button class="plan-btn" data-plan="Elite">Get Started</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRAINERS SECTION -->
+      <section class="trainers section">
+        <div class="container">
+          <h2>Meet Our Expert Trainers</h2>
+
+          <div class="trainers-grid">
+            <article class="trainer-card">
+<div class="trainer-img">
+    <img src="assets/images/trainer-ahmed.jpg" alt="Ahmed Raza">
+</div>
+              <h3>Ahmed Raza</h3>
+              <p>Strength & Conditioning</p>
+              <p>10 Years Experience</p>
+            </article>
+
+            <article class="trainer-card">
+              <div class="trainer-img">
+                <img src="assets/images/trainer-sara.jpg" alt="Sara Khan">
+              </div>
+              <h3>Sara Khan</h3>
+              <p>Yoga & Wellness</p>
+              <p>8 Years Experience</p>
+            </article>
+
+            <article class="trainer-card">
+              <div class="trainer-img">
+                <img src="assets/images/trainer-bilal.jpg" alt="Bilal Mirza">
+              </div>
+              <h3>Bilal Mirza</h3>
+              <p>Boxing & Martial Arts</p>
+              <p>12 Years Experience</p>
+            </article>
+
+            <article class="trainer-card">
+              <div class="trainer-img">
+                <img src="assets/images/trainer-nadia.jpg" alt="Nadia Ali">
+              </div>
+              <h3>Nadia Ali</h3>
+              <p>Nutrition & Weight Loss</p>
+              <p>7 Years Experience</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="testimonials section">
+        <div class="container">
+          <h2>What Our Members Say</h2>
+
+          <div class="testimonial-slider">
+            <article class="testimonial active">
+              <p>"The best gym experience I've had in Karachi."</p>
+              <div>★★★★★</div>
+              <h4>Ali Hassan</h4>
+              <span>Pro Member</span>
+            </article>
+
+            <article class="testimonial">
+              <p>"Amazing trainers and world-class equipment."</p>
+              <div>★★★★★</div>
+              <h4>Sara Ahmed</h4>
+              <span>Elite Member</span>
+            </article>
+
+            <article class="testimonial">
+              <p>"I achieved my fitness goals faster than expected."</p>
+              <div>★★★★★</div>
+              <h4>Usman Khan</h4>
+              <span>Starter Member</span>
+            </article>
+          </div>
+
+          <div class="carousel-dots">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact section">
+        <div class="container">
+          <h2>Start Your Journey Today</h2>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <p><strong>Phone:</strong> 0300-IRONPEAK</p>
+              <p><strong>Email:</strong> info@ironpeak.pk</p>
+              <p><strong>Address:</strong> Clifton, Karachi</p>
+              <p><strong>Hours:</strong> 6am - 11pm Daily</p>
+            </div>
+
+            <form id="contactForm">
+              <input type="text" id="name" placeholder="Your Name" />
+
+              <input type="email" id="email" placeholder="Your Email" />
+
+              <input type="tel" id="phone" placeholder="Phone (Optional)" />
+
+              <select id="membershipPlan">
+                <option value="">Select Plan</option>
+                <option>Starter</option>
+                <option>Pro</option>
+                <option>Elite</option>
+              </select>
+
+              <textarea id="message" placeholder="Message"></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+
+            <div id="successMessage" class="success-message">
+              Thank you! We'll contact you within 24 hours.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <h3>IRONPEAK ❤️</h3>
+
+        <p>Forge Your Best Self</p>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#facilities">Facilities</a>
+          <a href="#services">Services</a>
+          <a href="#plans">Plans</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+          <a href="#">TikTok</a>
+        </div>
+
+        <p>© 2025 IRONPEAK GYM — Karachi, Pakistan</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
