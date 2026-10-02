@@ -1,0 +1,48 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+require("dotenv").config();
+const authRoutes = require("./routes/auth");
+const projectRoutes = require("./routes/projects");
+const contributionRoutes = require("./routes/contributions");
+const updateRoutes = require("./routes/updates");
+const app = express();
+
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL || "https://fazal305.github.io",
+    credentials: true,
+  }),
+);
+app.use(express.json());
+app.use(cookieParser());
+app.use("/api/auth", authRoutes);
+app.use("/api/projects", projectRoutes);
+app.use("/api/contributions", contributionRoutes);
+app.use("/api/updates", updateRoutes);
+app.get("/api/health", (req, res) => {
+  res.json({
+    status: "OK",
+    message: "Crowdfunding API is running",
+  });
+});
+app.get("/", (req, res) => {
+  res.send("Crowdfunding API is running...");
+});
+
+async function connectDB() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log("MongoDB Connected Successfully");
+  } catch (error) {
+    console.error("MongoDB Connection Failed:", error.message);
+    process.exit(1);
+  }
+}
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
