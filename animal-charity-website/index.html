@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- PAGE META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Animal charity website with adoption filters, donation system, and volunteer forms built using HTML, CSS, and JavaScript for HexSoftwares Internship.">
+    <link rel="canonical" href="https://fazal305.github.io/HexSoftwares_AnimalCharityWebsite/">
+
+    <!-- PAGE TITLE -->
+    <title>PAWSAFE | Animal Charity Organization</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fazal305.github.io/HexSoftwares_AnimalCharityWebsite/">
+    <meta property="og:title" content="PAWSAFE | Animal Charity Organization">
+    <meta property="og:description" content="Animal charity website with adoption filters, donation system, and volunteer forms built using HTML, CSS, and JavaScript for HexSoftwares Internship.">
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PAWSAFE | Animal Charity Organization">
+    <meta name="twitter:description" content="Animal charity website with adoption filters, donation system, and volunteer forms built using HTML, CSS, and JavaScript for HexSoftwares Internship.">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="container navbar-container">
+
+            <a href="#home" class="logo">
+                🐾 PAWSAFE
+            </a>
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Open Menu">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#mission">Mission</a>
+                <a href="#programs">Programs</a>
+                <a href="#animals">Animals</a>
+                <a href="#help">How to Help</a>
+                <a href="#donate">Donate</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <p class="hero-tagline">
+                Karachi Animal Rescue & Adoption
+            </p>
+
+            <h1>
+                Every Life Deserves a Second Chance
+            </h1>
+
+            <p class="hero-description">
+                We rescue, rehabilitate, and rehome animals in
+                need across Karachi, giving them safety,
+                medical care, and a loving future.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#animals" class="btn-primary">
+                    Adopt a Pet
+                </a>
+
+                <a href="#donate" class="btn-secondary">
+                    Donate Now
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div class="stat-card">
+                    <h3>1,200+</h3>
+                    <p>Animals Rescued</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>850+</h3>
+                    <p>Happy Adoptions</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Volunteers</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>5+</h3>
+                    <p>Years of Service</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+<!-- MISSION -->
+<section id="mission" class="mission">
+    <div class="container mission-container">
+
+        <!-- LEFT TEXT -->
+        <div class="mission-text js-animate">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                To rescue abandoned, abused, and stray animals in Karachi,
+                provide them with medical care and shelter, and find them
+                loving forever homes.
+            </p>
+
+            <div class="mission-cards">
+
+                <div class="mission-card">
+                    <h3>❤️ Rescue</h3>
+                    <p>We respond to emergency calls and rescue animals in distress.</p>
+                </div>
+
+                <div class="mission-card">
+                    <h3>🏥 Rehabilitate</h3>
+                    <p>Full veterinary care, vaccination, and recovery support.</p>
+                </div>
+
+                <div class="mission-card">
+                    <h3>🏠 Rehome</h3>
+                    <p>Careful adoption process to find loving forever families.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="mission-image js-animate">
+
+            <img src="assets/images/mission.jpg" alt="Animal rescue mission">
+
+        </div>
+
+    </div>
+</section>
+
+   <!-- PROGRAMS -->
+<section id="programs" class="programs">
+
+    <div class="container">
+
+        <h2 class="js-animate">Our Programs</h2>
+
+        <div class="programs-grid">
+
+            <div class="program-card js-animate">
+                <div class="icon-circle">🐕</div>
+                <h3>Dog Rescue Program</h3>
+                <p>Rescuing stray and abandoned dogs across Karachi streets.</p>
+                <a href="#donate">Learn More</a>
+            </div>
+
+            <div class="program-card js-animate">
+                <div class="icon-circle">🐱</div>
+                <h3>Cat Shelter Program</h3>
+                <p>Safe shelter and feeding programs for rescued cats.</p>
+                <a href="#donate">Learn More</a>
+            </div>
+
+            <div class="program-card js-animate">
+                <div class="icon-circle">💔</div>
+                <h3>Spay & Neuter Initiative</h3>
+                <p>Controlling stray population through free sterilization.</p>
+                <a href="#donate">Learn More</a>
+            </div>
+
+            <div class="program-card js-animate">
+                <div class="icon-circle">🚑</div>
+                <h3>Emergency Rescue Team</h3>
+                <p>24/7 rapid response for injured and distressed animals.</p>
+                <a href="#donate">Learn More</a>
+            </div>
+
+            <div class="program-card js-animate">
+                <div class="icon-circle">👩‍⚕️</div>
+                <h3>Veterinary Aid</h3>
+                <p>Subsidized vet care for low-income pet owners.</p>
+                <a href="#donate">Learn More</a>
+            </div>
+
+            <div class="program-card js-animate">
+                <div class="icon-circle">📚</div>
+                <h3>Education Program</h3>
+                <p>Awareness campaigns in schools and communities.</p>
+                <a href="#donate">Learn More</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- ANIMALS -->
+<section id="animals" class="animals">
+
+    <div class="container">
+
+        <h2 class="js-animate">Meet Our Rescue Animals</h2>
+
+        <!-- FILTER BUTTONS -->
+        <div class="animal-filters js-animate">
+
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="dog">Dogs</button>
+            <button class="filter-btn" data-filter="cat">Cats</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+
+        </div>
+
+        <!-- ANIMAL GRID -->
+        <div class="animal-grid">
+
+            <!-- 1 -->
+            <div class="animal-card js-animate" data-type="dog">
+                <div class="animal-image">🐶</div>
+                <h3>Biscuit</h3>
+                <p>2 years • Labrador Mix • Playful & energetic</p>
+                <span class="status available">Available</span>
+                <button onclick="prefillAnimal('Biscuit')">Adopt Me</button>
+            </div>
+
+            <!-- 2 -->
+            <div class="animal-card js-animate" data-type="cat">
+                <div class="animal-image">🐱</div>
+                <h3>Luna</h3>
+                <p>1.5 years • Persian Mix • Calm & loving</p>
+                <span class="status foster">In Foster</span>
+                <button onclick="prefillAnimal('Luna')">Adopt Me</button>
+            </div>
+
+            <!-- 3 -->
+            <div class="animal-card js-animate" data-type="dog">
+                <div class="animal-image">🐕</div>
+                <h3>Max</h3>
+                <p>3 years • Indie Dog • Loyal & friendly</p>
+                <span class="status available">Available</span>
+                <button onclick="prefillAnimal('Max')">Adopt Me</button>
+            </div>
+
+            <!-- 4 -->
+            <div class="animal-card js-animate" data-type="cat">
+                <div class="animal-image">🐈</div>
+                <h3>Misty</h3>
+                <p>2 years • Street Cat • Independent & sweet</p>
+                <span class="status available">Available</span>
+                <button onclick="prefillAnimal('Misty')">Adopt Me</button>
+            </div>
+
+            <!-- 5 -->
+            <div class="animal-card js-animate" data-type="other">
+                <div class="animal-image">🐰</div>
+                <h3>Mango</h3>
+                <p>1 year • Rabbit • Gentle & quiet</p>
+                <span class="status available">Available</span>
+                <button onclick="prefillAnimal('Mango')">Adopt Me</button>
+            </div>
+
+            <!-- 6 -->
+            <div class="animal-card js-animate" data-type="dog">
+                <div class="animal-image">🐕‍🦺</div>
+                <h3>Rocky</h3>
+                <p>4 years • Shepherd Mix • Protective & calm</p>
+                <span class="status foster">In Foster</span>
+                <button onclick="prefillAnimal('Rocky')">Adopt Me</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- HOW YOU CAN HELP -->
+<section id="help" class="help">
+
+    <div class="container">
+
+        <h2 class="js-animate">How You Can Help</h2>
+
+        <div class="help-grid">
+
+            <div class="help-card js-animate">
+                <div class="help-icon">🐶</div>
+                <h3>Adopt</h3>
+                <p>Give a rescued animal a loving forever home.</p>
+                <a href="#animals" class="help-btn">Adopt Now</a>
+            </div>
+
+            <div class="help-card js-animate">
+                <div class="help-icon">🤝</div>
+                <h3>Foster</h3>
+                <p>Provide temporary care until adoption.</p>
+                <a href="#contact" class="help-btn">Become a Foster</a>
+            </div>
+
+            <div class="help-card js-animate">
+                <div class="help-icon">💰</div>
+                <h3>Donate</h3>
+                <p>Support food, treatment, and rescue operations.</p>
+                <a href="#donate" class="help-btn">Donate Now</a>
+            </div>
+
+            <div class="help-card js-animate">
+                <div class="help-icon">💚</div>
+                <h3>Volunteer</h3>
+                <p>Join our team and help animals on the ground.</p>
+                <a href="#volunteer" class="help-btn">Join Us</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- DONATE -->
+<section id="donate" class="donate">
+
+    <div class="container">
+
+        <h2 class="js-animate">Support Our Mission</h2>
+
+        <p class="donate-subtext js-animate">
+            Your donation directly saves animal lives in Karachi.
+        </p>
+
+        <!-- DONATION OPTIONS -->
+        <div class="donation-box js-animate">
+
+            <h3>Select Amount (PKR)</h3>
+
+            <div class="donation-presets">
+
+                <button class="donate-btn" data-amount="500">500</button>
+                <button class="donate-btn" data-amount="1000">1000</button>
+                <button class="donate-btn" data-amount="2500">2500</button>
+                <button class="donate-btn" data-amount="5000">5000</button>
+
+            </div>
+
+            <input
+                type="number"
+                id="donationAmount"
+                placeholder="Enter custom amount"
+            />
+
+            <div class="donation-impact" id="donationImpact">
+                PKR 500 = Feeds 5 animals for a week
+            </div>
+
+            <div class="donation-toggle">
+
+                <label>
+                    <input type="radio" name="type" checked>
+                    One-time
+                </label>
+
+                <label>
+                    <input type="radio" name="type">
+                    Monthly
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+        <form id="donationForm" class="donation-form js-animate">
+
+            <input type="text" id="donorName" placeholder="Your Name" required>
+            <input type="email" id="donorEmail" placeholder="Your Email" required>
+
+            <select id="paymentMethod">
+                <option>Bank Transfer</option>
+                <option>EasyPaisa</option>
+                <option>JazzCash</option>
+            </select>
+
+            <button type="submit">Donate Now</button>
+
+        </form>
+
+        <!-- SUCCESS -->
+        <div id="donationSuccess" class="success-box" style="display:none;">
+            <h3>Thank You ❤️</h3>
+            <p>Your support helps save lives in Karachi.</p>
+
+            <p><strong>Bank Details:</strong></p>
+            <p>PAWSAFE Rescue Fund</p>
+            <p>Account: 123456789</p>
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- VOLUNTEER -->
+<section id="volunteer" class="volunteer">
+
+    <div class="container">
+
+        <h2 class="js-animate">Join Our Team</h2>
+
+        <p class="volunteer-subtext js-animate">
+            Become part of PAWSAFE and help save animal lives in Karachi.
+        </p>
+
+        <!-- ROLES -->
+        <div class="volunteer-roles">
+
+            <div class="role-card js-animate">
+                <div class="role-icon">🐶</div>
+                <h3>Animal Care Volunteer</h3>
+                <p>Feeding, grooming, walking rescued animals.</p>
+            </div>
+
+            <div class="role-card js-animate">
+                <div class="role-icon">🏠</div>
+                <h3>Foster Family</h3>
+                <p>Provide temporary home for rescued animals.</p>
+            </div>
+
+            <div class="role-card js-animate">
+                <div class="role-icon">📢</div>
+                <h3>Event Organizer</h3>
+                <p>Help organize adoption drives and awareness events.</p>
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+        <form id="volunteerForm" class="volunteer-form js-animate">
+
+            <input type="text" id="volName" placeholder="Full Name">
+            <input type="email" id="volEmail" placeholder="Email">
+            <input type="text" id="volPhone" placeholder="Phone Number">
+
+            <select id="volRole">
+                <option value="">Select Role</option>
+                <option>Animal Care Volunteer</option>
+                <option>Foster Family</option>
+                <option>Event Organizer</option>
+            </select>
+
+            <div class="availability">
+
+                <label><input type="checkbox" value="Weekdays"> Weekdays</label>
+                <label><input type="checkbox" value="Weekends"> Weekends</label>
+                <label><input type="checkbox" value="Both"> Both</label>
+
+            </div>
+
+            <textarea id="volMessage" placeholder="Why do you want to join?"></textarea>
+
+            <p id="volError" class="error-text"></p>
+
+            <button type="submit">Submit Application</button>
+
+        </form>
+
+        <!-- SUCCESS -->
+        <div id="volSuccess" class="success-box" style="display:none;">
+            <h3>Welcome to PAWSAFE ❤️</h3>
+            <p>We will contact you soon with next steps.</p>
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <h2 class="js-animate">Get in Touch</h2>
+
+        <div class="contact-wrapper">
+
+            <!-- INFO -->
+            <div class="contact-info js-animate">
+
+                <h3>PAWSAFE Karachi</h3>
+
+                <p>📧 info@pawsafe.pk</p>
+                <p>📞 021-PAWSAFE</p>
+                <p>📍 Defence, Karachi</p>
+                <p>🕒 Mon-Sat 9am - 6pm</p>
+
+            </div>
+
+            <!-- FORM -->
+            <form id="contactForm" class="contact-form js-animate">
+
+                <input type="text" id="contactName" placeholder="Your Name">
+
+                <input type="email" id="contactEmail" placeholder="Your Email">
+
+                <select id="contactSubject">
+                    <option value="">Select Subject</option>
+                    <option value="adoption">Adoption Query</option>
+                    <option value="donation">Donation</option>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="emergency">Emergency Rescue</option>
+                    <option value="general">General</option>
+                </select>
+
+                <!-- CONDITIONAL FIELD -->
+                <input
+                    type="text"
+                    id="animalField"
+                    placeholder="Animal Name"
+                    style="display:none;"
+                >
+
+                <textarea id="contactMessage" placeholder="Your Message"></textarea>
+
+                <button type="submit">Send Message</button>
+
+                <p id="contactError" class="error-text"></p>
+
+            </form>
+
+        </div>
+
+        <!-- SUCCESS -->
+        <div id="contactSuccess" class="success-box" style="display:none;">
+            <h3>Message Sent ❤️</h3>
+            <p>We’ll get back to you soon.</p>
+        </div>
+
+    </div>
+
+</section>
+
+   <!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+            <h3>🐾 PAWSAFE</h3>
+            <p>Every life deserves a second chance.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#mission">Mission</a>
+            <a href="#animals">Animals</a>
+            <a href="#donate">Donate</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>YouTube</p>
+            <p>WhatsApp</p>
+        </div>
+
+        <div class="footer-emergency">
+            <h4>Emergency</h4>
+            <p>📞 0300-PAWSAFE</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 PAWSAFE — Karachi, Pakistan</p>
+    </div>
+
+</footer>
+
+<!-- BACK TO TOP -->
+<button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
